@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C914977C21A06E3100824DE0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914977B21A06E3100824DE0 /* SettingsViewController.swift */; };
 		C98D25FF21A061560051813B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D25FE21A061560051813B /* AppDelegate.swift */; };
 		C98D260121A061560051813B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D260021A061560051813B /* ViewController.swift */; };
 		C98D260421A061560051813B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98D260221A061560051813B /* Main.storyboard */; };
 		C98D260621A061560051813B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98D260521A061560051813B /* Assets.xcassets */; };
 		C98D260921A061560051813B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98D260721A061560051813B /* LaunchScreen.storyboard */; };
+		C9CDB1DA21A0C6C700DC2DB5 /* TouchReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CDB1D921A0C6C700DC2DB5 /* TouchReporter.swift */; };
+		C9CDB1F921A1B89300DC2DB5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CDB1F821A1B89300DC2DB5 /* Settings.swift */; };
+		C9CDB1FB21AB3C8200DC2DB5 /* TouchClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C9CDB1FA21AB3C8200DC2DB5 /* TouchClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C914977B21A06E3100824DE0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C98D25FB21A061560051813B /* TouchCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98D25FE21A061560051813B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98D260021A061560051813B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		C98D260521A061560051813B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98D260821A061560051813B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98D260A21A061560051813B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9CDB1D921A0C6C700DC2DB5 /* TouchReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchReporter.swift; sourceTree = "<group>"; };
+		C9CDB1F821A1B89300DC2DB5 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C9CDB1FA21AB3C8200DC2DB5 /* TouchClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TouchClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,16 @@
 		C98D25FD21A061560051813B /* TouchCapture */ = {
 			isa = PBXGroup;
 			children = (
+				C9CDB1FA21AB3C8200DC2DB5 /* TouchClassifier.mlmodel */,
 				C98D25FE21A061560051813B /* AppDelegate.swift */,
 				C98D260021A061560051813B /* ViewController.swift */,
 				C98D260221A061560051813B /* Main.storyboard */,
 				C98D260521A061560051813B /* Assets.xcassets */,
 				C98D260721A061560051813B /* LaunchScreen.storyboard */,
 				C98D260A21A061560051813B /* Info.plist */,
+				C914977B21A06E3100824DE0 /* SettingsViewController.swift */,
+				C9CDB1D921A0C6C700DC2DB5 /* TouchReporter.swift */,
+				C9CDB1F821A1B89300DC2DB5 /* Settings.swift */,
 			);
 			path = TouchCapture;
 			sourceTree = "<group>";
@@ -74,6 +86,7 @@
 				C98D25F721A061560051813B /* Sources */,
 				C98D25F821A061560051813B /* Frameworks */,
 				C98D25F921A061560051813B /* Resources */,
+				C9CDB1DB21A1689D00DC2DB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -91,11 +104,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Mathew Miller";
 				TargetAttributes = {
 					C98D25FA21A061560051813B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +145,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9CDB1DB21A1689D00DC2DB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport SERVER_IP=`ipconfig getifaddr en0`\nECHO $SERVER_IP\nINFO_PLIST=\"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\"\n/usr/libexec/PlistBuddy -c \"Set SERVER_IP $SERVER_IP\" \"$INFO_PLIST\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C98D25F721A061560051813B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CDB1DA21A0C6C700DC2DB5 /* TouchReporter.swift in Sources */,
 				C98D260121A061560051813B /* ViewController.swift in Sources */,
 				C98D25FF21A061560051813B /* AppDelegate.swift in Sources */,
+				C9CDB1FB21AB3C8200DC2DB5 /* TouchClassifier.mlmodel in Sources */,
+				C914977C21A06E3100824DE0 /* SettingsViewController.swift in Sources */,
+				C9CDB1F921A1B89300DC2DB5 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +215,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +223,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +274,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +282,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -278,9 +320,10 @@
 				DEVELOPMENT_TEAM = 28EX36543V;
 				INFOPLIST_FILE = TouchCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.millermjared.TouchCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -293,9 +336,10 @@
 				DEVELOPMENT_TEAM = 28EX36543V;
 				INFOPLIST_FILE = TouchCapture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.millermjared.TouchCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
